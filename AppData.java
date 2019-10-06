@@ -9,4 +9,9 @@ public class AppData {
         R.drawable.lslogo, R.drawable.kansascitylogo};
 
     public static Integer[] id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    public static String[] URLS = {"https://www.youtube.com/", "https://www.google.com/",
+            "http://www.postcoffeecompany.com/", "https://www.accuweather.com/",
+            "https://ridekc.org/", "http://www.seattle.gov/",
+            "https://cityofls.net/", "https://www.kcmo.gov/"};
 }
