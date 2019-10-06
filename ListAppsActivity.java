@@ -1,6 +1,7 @@
 package com.example.ucm;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +11,8 @@ import android.view.View;
 import java.util.ArrayList;
 
 public class ListAppsActivity extends AppCompatActivity {
+
+    public boolean webPage = false;
 
     private static ArrayList<AppModel> data;
     private static RecyclerView.Adapter adapter;
