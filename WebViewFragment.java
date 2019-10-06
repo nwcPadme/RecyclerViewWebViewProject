@@ -11,7 +11,7 @@ import android.webkit.WebViewClient;
 
 public class WebViewFragment extends Fragment {
 
-    public static String mURL = "https://www.youtube.com/";
+    public static String mURL = "";
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.web_view, container, false);
