@@ -34,4 +34,8 @@ public class AppList {
     public List<AppModel> getApps() {
         return new ArrayList<>(mAppLists);
     }
+
+    public AppModel getApp(int id) {
+        return mAppLists.get(id);
+    }
 }
