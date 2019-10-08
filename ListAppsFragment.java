@@ -1,7 +1,5 @@
 package com.example.ucm;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListAppsFragment extends Fragment {
@@ -36,22 +33,7 @@ public class ListAppsFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        //displayRecyclerView();
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-        if(context instanceof Activity) {
-            /*
-            try {
-                mListener = (OnURLSelectedListener) context;
-            } catch (ClassCastException e) {
-                throw new ClassCastException(context.toString() + " must implement OnURLSelectedListener");
-            }
-            */
-        }
+        updateUI();
     }
 
     @Override
@@ -94,7 +76,7 @@ public class ListAppsFragment extends Fragment {
 
         @Override
         public void onClick(View view) {
-            Intent intent = WebViewActivity.newIntent(getActivity(), mApp.getID());
+            Intent intent = WebViewActivity.newIntent(getActivity(), mApp.getURLs());
             startActivity(intent);
         }
     }
@@ -129,4 +111,5 @@ public class ListAppsFragment extends Fragment {
     public interface OnURLSelectedListener {
         public void onURLSelected(String URL);
     }
+
 }
